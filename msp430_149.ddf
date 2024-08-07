@@ -1,0 +1,293 @@
+;;-------------------------------------------------------------------------
+;;      C-Spy Device Definition File (.ddf) for
+;;      Texas Instruments MSP430x14x microcontrollers.
+;;
+;;      Texas Instruments, Revision: 1.0
+;;-------------------------------------------------------------------------
+
+[CORE]
+MSP430
+
+[CHIP]
+MSP430x14x
+
+;;-------------------------------------------------------------------------
+;; Sfr
+;;
+;; Define Sfrs
+;;
+;; Syntax: SfrN = Name, Segment, Address, Size, Base
+;;   SfrN:     N is (arbitrary) Sfr number
+;;   Name:     Sfr name
+;;   Segment:  Memory segment where sfr is placed
+;;   Address:  Address in segment
+;;   Size:     Sfr size in bytes
+;;   Base:     Base with which to display sfr in C-Spy (???)
+;;-------------------------------------------------------------------------
+
+[Sfr]
+
+;; Name Segment Address Size Display ;; Comment
+;;-------------------------------------------------------------------------
+
+;; Special Function
+
+Sfr0 =  IE1,  Memory, 0x0000, 1, base(16) ;; Interrupt Enable 1
+Sfr1 =  IE2,  Memory, 0x0001, 1, base(16) ;; Interrupt Enable 2
+Sfr2 =  IFG1, Memory, 0x0002, 1, base(16) ;; Interrupt Flag 1
+Sfr3 =  IFG2, Memory, 0x0003, 1, base(16) ;; Interrupt Flag 2
+Sfr4 =  ME1,  Memory, 0x0004, 1, base(16) ;; Module Enable 1
+Sfr5 =  ME2,  Memory, 0x0005, 1, base(16) ;; Module Enable 2
+
+;; Port 1
+
+Sfr6  = P1IN,  Memory, 0x0020, 1, base(16) ;; Port 1 Input
+Sfr7  = P1OUT, Memory, 0x0021, 1, base(16) ;; Port 1 Output
+Sfr8  = P1DIR, Memory, 0x0022, 1, base(16) ;; Port 1 Direction
+Sfr9  = P1IFG, Memory, 0x0023, 1, base(16) ;; Port 1 Interrupt Flag
+Sfr10 = P1IES, Memory, 0x0024, 1, base(16) ;; Port 1 Interrupt Edge Select
+Sfr11 = P1IE,  Memory, 0x0025, 1, base(16) ;; Port 1 Interrupt Enable
+Sfr12 = P1SEL, Memory, 0x0026, 1, base(16) ;; Port 1 Selection
+
+;; Port 2
+
+Sfr13 = P2IN,  Memory, 0x0028, 1, base(16) ;; Port 2 Input
+Sfr14 = P2OUT, Memory, 0x0029, 1, base(16) ;; Port 2 Output
+Sfr15 = P2DIR, Memory, 0x002a, 1, base(16) ;; Port 2 Direction
+Sfr16 = P2IFG, Memory, 0x002b, 1, base(16) ;; Port 2 Interrupt Flag
+Sfr17 = P2IES, Memory, 0x002c, 1, base(16) ;; Port 2 Interrupt Edge Select
+Sfr18 = P2IE,  Memory, 0x002d, 1, base(16) ;; Port 2 Interrupt Enable
+Sfr19 = P2SEL, Memory, 0x002e, 1, base(16) ;; Port 2 Selection
+
+;; Port 3
+
+Sfr20 = P3IN,  Memory, 0x0018, 1, base(16) ;; Port 3 Input
+Sfr21 = P3OUT, Memory, 0x0019, 1, base(16) ;; Port 3 Output
+Sfr22 = P3DIR, Memory, 0x001a, 1, base(16) ;; Port 3 Direction
+Sfr23 = P3SEL, Memory, 0x001b, 1, base(16) ;; Port 3 Selection
+
+;; Port 4
+
+Sfr24 = P4IN,  Memory, 0x001c, 1, base(16) ;; Port 4 Input
+Sfr25 = P4OUT, Memory, 0x001d, 1, base(16) ;; Port 4 Output
+Sfr26 = P4DIR, Memory, 0x001e, 1, base(16) ;; Port 4 Direction
+Sfr27 = P4SEL, Memory, 0x001f, 1, base(16) ;; Port 4 Selection
+
+;; Port 5
+
+Sfr28 = P5IN,  Memory, 0x0030, 1, base(16) ;; Port 5 Input
+Sfr29 = P5OUT, Memory, 0x0031, 1, base(16) ;; Port 5 Output
+Sfr30 = P5DIR, Memory, 0x0032, 1, base(16) ;; Port 5 Direction
+Sfr31 = P5SEL, Memory, 0x0033, 1, base(16) ;; Port 5 Selection
+
+;; Port 6
+
+Sfr32 = P6IN,  Memory, 0x0034, 1, base(16) ;; Port 6 Input
+Sfr33 = P6OUT, Memory, 0x0035, 1, base(16) ;; Port 6 Output
+Sfr34 = P6DIR, Memory, 0x0036, 1, base(16) ;; Port 6 Direction
+Sfr35 = P6SEL, Memory, 0x0037, 1, base(16) ;; Port 6 Selection
+
+;; System Clock
+
+Sfr36 = DCOCTL,  Memory, 0x0056, 1, base(16) ;; DCO Clock Frequency Control
+Sfr37 = BCSCTL1, Memory, 0x0057, 1, base(16) ;; Basic Clock System Control 1
+Sfr38 = BCSCTL2, Memory, 0x0058, 1, base(16) ;; Basic Clock System Control 2
+
+;; Comparator A
+
+Sfr39 = CACTL1, Memory, 0x0059, 1, base(16) ;; Comparator A Control 1
+Sfr40 = CACTL2, Memory, 0x005a, 1, base(16) ;; Comparator A Control 2
+Sfr41 = CAPD,   Memory, 0x005b, 1, base(16) ;; Comparator A Port Disable
+
+;; UART 0
+
+;;Sfr42 = UCTL.0,   Memory, 0x0070, 1, base(16) ;; UART 0 Control
+;;Sfr43 = UTCTL.0,  Memory, 0x0071, 1, base(16) ;; UART 0 Transmit Control
+;;Sfr44 = URCTL.0,  Memory, 0x0072, 1, base(16) ;; UART 0 Receive Control
+;;Sfr45 = UMCTL.0,  Memory, 0x0073, 1, base(16) ;; UART 0 Modulation Control
+;;Sfr46 = UBR0.0,   Memory, 0x0074, 1, base(16) ;; UART 0 Baud Rate 0
+;;Sfr47 = UBR1.0,   Memory, 0x0075, 1, base(16) ;; UART 0 Baud Rate 1
+;;Sfr48 = URXBUF.0, Memory, 0x0076, 1, base(16) ;; UART 0 Receive Buffer
+;;Sfr49 = UTXBUF.0, Memory, 0x0077, 1, base(16) ;; UART 0 Transmit Buffer
+Sfr42 = U0CTL,   Memory, 0x0070, 1, base(16) ;; UART 0 Control
+Sfr43 = U0TCTL,  Memory, 0x0071, 1, base(16) ;; UART 0 Transmit Control
+Sfr44 = U0RCTL,  Memory, 0x0072, 1, base(16) ;; UART 0 Receive Control
+Sfr45 = U0MCTL,  Memory, 0x0073, 1, base(16) ;; UART 0 Modulation Control
+Sfr46 = U0BR0,   Memory, 0x0074, 1, base(16) ;; UART 0 Baud Rate 0
+Sfr47 = U0BR1,   Memory, 0x0075, 1, base(16) ;; UART 0 Baud Rate 1
+Sfr48 = U0RXBUF, Memory, 0x0076, 1, base(16) ;; UART 0 Receive Buffer
+Sfr49 = U0TXBUF, Memory, 0x0077, 1, base(16) ;; UART 0 Transmit Buffer
+
+;; UART 1
+
+;;Sfr50 = UCTL.1,   Memory, 0x0078, 1, base(16) ;; UART 1 Control
+;;Sfr51 = UTCTL.1,  Memory, 0x0079, 1, base(16) ;; UART 1 Transmit Control
+;;Sfr52 = URCTL.1,  Memory, 0x007a, 1, base(16) ;; UART 1 Receive Control
+;;Sfr53 = UMCTL.1,  Memory, 0x007b, 1, base(16) ;; UART 1 Modulation Control
+;;Sfr54 = UBR0.1,   Memory, 0x007c, 1, base(16) ;; UART 1 Baud Rate 0
+;;Sfr55 = UBR1.1,   Memory, 0x007d, 1, base(16) ;; UART 1 Baud Rate 1
+;;Sfr56 = URXBUF.1, Memory, 0x007e, 1, base(16) ;; UART 1 Receive Buffer
+;;Sfr57 = UTXBUF.1, Memory, 0x007f, 1, base(16) ;; UART 1 Transmit Buffer
+Sfr50 = U1CTL,   Memory, 0x0078, 1, base(16) ;; UART 1 Control
+Sfr51 = U1TCTL,  Memory, 0x0079, 1, base(16) ;; UART 1 Transmit Control
+Sfr52 = U1RCTL,  Memory, 0x007a, 1, base(16) ;; UART 1 Receive Control
+Sfr53 = U1MCTL,  Memory, 0x007b, 1, base(16) ;; UART 1 Modulation Control
+Sfr54 = U1BR0,   Memory, 0x007c, 1, base(16) ;; UART 1 Baud Rate 0
+Sfr55 = U1BR1,   Memory, 0x007d, 1, base(16) ;; UART 1 Baud Rate 1
+Sfr56 = U1RXBUF, Memory, 0x007e, 1, base(16) ;; UART 1 Receive Buffer
+Sfr57 = U1TXBUF, Memory, 0x007f, 1, base(16) ;; UART 1 Transmit Buffer
+
+;; ADC12
+
+Sfr58 = ADC12MCTL0,  Memory, 0x0080, 1, base(16) ;; ADC12 Memory Control 0
+Sfr59 = ADC12MCTL1,  Memory, 0x0081, 1, base(16) ;; ADC12 Memory Control 1
+Sfr60 = ADC12MCTL2,  Memory, 0x0082, 1, base(16) ;; ADC12 Memory Control 2
+Sfr61 = ADC12MCTL3,  Memory, 0x0083, 1, base(16) ;; ADC12 Memory Control 3
+Sfr62 = ADC12MCTL4,  Memory, 0x0084, 1, base(16) ;; ADC12 Memory Control 4
+Sfr63 = ADC12MCTL5,  Memory, 0x0085, 1, base(16) ;; ADC12 Memory Control 5
+Sfr64 = ADC12MCTL6,  Memory, 0x0086, 1, base(16) ;; ADC12 Memory Control 6
+Sfr65 = ADC12MCTL7,  Memory, 0x0087, 1, base(16) ;; ADC12 Memory Control 7
+Sfr66 = ADC12MCTL8,  Memory, 0x0088, 1, base(16) ;; ADC12 Memory Control 8
+Sfr67 = ADC12MCTL9,  Memory, 0x0089, 1, base(16) ;; ADC12 Memory Control 9
+Sfr68 = ADC12MCTL10, Memory, 0x008a, 1, base(16) ;; ADC12 Memory Control 10
+Sfr69 = ADC12MCTL11, Memory, 0x008b, 1, base(16) ;; ADC12 Memory Control 11
+Sfr70 = ADC12MCTL12, Memory, 0x008c, 1, base(16) ;; ADC12 Memory Control 12
+Sfr71 = ADC12MCTL13, Memory, 0x008d, 1, base(16) ;; ADC12 Memory Control 13
+Sfr72 = ADC12MCTL14, Memory, 0x008e, 1, base(16) ;; ADC12 Memory Control 14
+Sfr73 = ADC12MCTL15, Memory, 0x008f, 1, base(16) ;; ADC12 Memory Control 15
+Sfr74 = ADC12CTL0,   Memory, 0x01A0, 2, base(16) ;; ADC12 Control 0
+Sfr75 = ADC12CTL1,   Memory, 0x01A2, 2, base(16) ;; ADC12 Control 1
+Sfr76 = ADC12IFG,    Memory, 0x01A4, 2, base(16) ;; ADC12 Interrupt Flag
+Sfr77 = ADC12IE,     Memory, 0x01A6, 2, base(16) ;; ADC12 Interrupt Enable
+Sfr78 = ADC12IV,     Memory, 0x01A8, 2, base(16) ;; ADC12 Interrupt Vector Word
+Sfr79 = ADC12MEM0,   Memory, 0x0140, 2, base(16) ;; ADC12 Conversion Memory 0
+Sfr80 = ADC12MEM1,   Memory, 0x0142, 2, base(16) ;; ADC12 Conversion Memory 1
+Sfr81 = ADC12MEM2,   Memory, 0x0144, 2, base(16) ;; ADC12 Conversion Memory 2
+Sfr82 = ADC12MEM3,   Memory, 0x0146, 2, base(16) ;; ADC12 Conversion Memory 3
+Sfr83 = ADC12MEM4,   Memory, 0x0148, 2, base(16) ;; ADC12 Conversion Memory 4
+Sfr84 = ADC12MEM5,   Memory, 0x014a, 2, base(16) ;; ADC12 Conversion Memory 5
+Sfr85 = ADC12MEM6,   Memory, 0x014c, 2, base(16) ;; ADC12 Conversion Memory 6
+Sfr86 = ADC12MEM7,   Memory, 0x014e, 2, base(16) ;; ADC12 Conversion Memory 7
+Sfr87 = ADC12MEM8,   Memory, 0x0150, 2, base(16) ;; ADC12 Conversion Memory 8
+Sfr88 = ADC12MEM9,   Memory, 0x0152, 2, base(16) ;; ADC12 Conversion Memory 9
+Sfr89 = ADC12MEM10,  Memory, 0x0154, 2, base(16) ;; ADC12 Conversion Memory 10
+Sfr90 = ADC12MEM11,  Memory, 0x0156, 2, base(16) ;; ADC12 Conversion Memory 11
+Sfr91 = ADC12MEM12,  Memory, 0x0158, 2, base(16) ;; ADC12 Conversion Memory 12
+Sfr92 = ADC12MEM13,  Memory, 0x015a, 2, base(16) ;; ADC12 Conversion Memory 13
+Sfr93 = ADC12MEM14,  Memory, 0x015c, 2, base(16) ;; ADC12 Conversion Memory 14
+Sfr94 = ADC12MEM15,  Memory, 0x015e, 2, base(16) ;; ADC12 Conversion Memory 15
+
+;; Flash
+
+Sfr95 = FCTL1, Memory, 0x0128, 2, base(16) ;; Flash Control 1
+Sfr96 = FCTL2, Memory, 0x012a, 2, base(16) ;; Flash Control 2
+Sfr97 = FCTL3, Memory, 0x012c, 2, base(16) ;; Flash Control 3
+
+;; Multiplier
+
+Sfr98  = MPY,    Memory, 0x0130, 2, base(16) ;; Multiply Unsigned/Operand 1
+Sfr99  = MPYS,   Memory, 0x0132, 2, base(16) ;; Multiply Signed/Operand 1
+Sfr100 = MAC,    Memory, 0x0134, 2, base(16) ;; Multiply Unsigned and Accumulate/Operand 1
+Sfr101 = MACS,   Memory, 0x0136, 2, base(16) ;; Multiply Signed and Accumulate/Operand 1
+;;Sfr102 = OP_2,   Memory, 0x0138, 2, base(16) ;; Operand 2
+Sfr102 = OP2,    Memory, 0x0138, 2, base(16) ;; Operand 2
+Sfr103 = RESLO,  Memory, 0x013a, 2, base(16) ;; Result Low Word
+Sfr104 = RESHI,  Memory, 0x013c, 2, base(16) ;; Result High Word
+Sfr105 = SUMEXT, Memory, 0x013e, 2, base(16) ;; Sum Extend
+
+;; Timer A
+
+Sfr106 = TAIV,    Memory, 0x012e, 2, base(16) ;; Timer A Interrupt Vector Word
+Sfr107 = TACTL,   Memory, 0x0160, 2, base(16) ;; Timer A Control
+;;Sfr108 = TACCTL0, Memory, 0x0162, 2, base(16) ;; Timer A Capture/Compare Control 0
+;;Sfr109 = TACCTL1, Memory, 0x0164, 2, base(16) ;; Timer A Capture/Compare Control 1
+;;Sfr110 = TACCTL2, Memory, 0x0166, 2, base(16) ;; Timer A Capture/Compare Control 2
+Sfr108 = CCTL0,   Memory, 0x0162, 2, base(16) ;; Timer A Capture/Compare Control 0
+Sfr109 = CCTL1,   Memory, 0x0164, 2, base(16) ;; Timer A Capture/Compare Control 1
+Sfr110 = CCTL2,   Memory, 0x0166, 2, base(16) ;; Timer A Capture/Compare Control 2
+Sfr111 = TAR,     Memory, 0x0170, 2, base(16) ;; Timer A
+;;Sfr112 = TACCR0,  Memory, 0x0172, 2, base(16) ;; Timer A Capture/Compare 0
+;;Sfr113 = TACCR1,  Memory, 0x0174, 2, base(16) ;; Timer A Capture/Compare 1
+;;Sfr114 = TACCR2,  Memory, 0x0176, 2, base(16) ;; Timer A Capture/Compare 2
+Sfr112 = CCR0,    Memory, 0x0172, 2, base(16) ;; Timer A Capture/Compare 0
+Sfr113 = CCR1,    Memory, 0x0174, 2, base(16) ;; Timer A Capture/Compare 1
+Sfr114 = CCR2,    Memory, 0x0176, 2, base(16) ;; Timer A Capture/Compare 2
+
+;; Timer B
+
+Sfr115 = TBIV,    Memory, 0x011e, 2, base(16) ;; Timer B Interrupt Vector Word
+Sfr116 = TBCTL,   Memory, 0x0180, 2, base(16) ;; Timer B Control
+Sfr117 = TBCCTL0, Memory, 0x0182, 2, base(16) ;; Timer B Capture/Compare Control 0
+Sfr118 = TBCCTL1, Memory, 0x0184, 2, base(16) ;; Timer B Capture/Compare Control 1
+Sfr119 = TBCCTL2, Memory, 0x0186, 2, base(16) ;; Timer B Capture/Compare Control 2
+Sfr120 = TBCCTL3, Memory, 0x0188, 2, base(16) ;; Timer B Capture/Compare Control 3
+Sfr121 = TBCCTL4, Memory, 0x018a, 2, base(16) ;; Timer B Capture/Compare Control 4
+Sfr122 = TBCCTL5, Memory, 0x018c, 2, base(16) ;; Timer B Capture/Compare Control 5
+Sfr123 = TBCCTL6, Memory, 0x018e, 2, base(16) ;; Timer B Capture/Compare Control 6
+Sfr124 = TBR,     Memory, 0x0190, 2, base(16) ;; Timer B
+Sfr125 = TBCCR0,  Memory, 0x0192, 2, base(16) ;; Timer B Capture/Compare 0
+Sfr126 = TBCCR1,  Memory, 0x0194, 2, base(16) ;; Timer B Capture/Compare 1
+Sfr127 = TBCCR2,  Memory, 0x0196, 2, base(16) ;; Timer B Capture/Compare 2
+Sfr128 = TBCCR3,  Memory, 0x0198, 2, base(16) ;; Timer B Capture/Compare 3
+Sfr129 = TBCCR4,  Memory, 0x019a, 2, base(16) ;; Timer B Capture/Compare 4
+Sfr130 = TBCCR5,  Memory, 0x019c, 2, base(16) ;; Timer B Capture/Compare 5
+Sfr131 = TBCCR6,  Memory, 0x019e, 2, base(16) ;; Timer B Capture/Compare 6
+
+;; Watchdog Timer
+
+Sfr132 = WDTCTL, Memory, 0x0120, 2, base(16) ;; Watchdog Timer Control
+
+;;----------------------------------------------------------------------------
+;; Sfr Group Info
+;;
+;; Logically tie related sfrs together in C-Spy by assigning them to groups.
+;;
+;; Continuing rows have extention :row, e.g. Group1:1, :2, ...
+;;
+;;----------------------------------------------------------------------------
+
+[SfrGroupInfo]
+Group0   = Special Function, IE1, IE2, IFG1, IFG2, ME1, ME2
+
+Group1   = Ports, P1IN, P1OUT, P1DIR, P1IFG, P1IES, P1IE, P1SEL
+Group1:1 = P2IN, P2OUT, P2DIR, P2IFG, P2IES, P2IE, P2SEL
+Group1:2 = P3IN, P3OUT, P3DIR, P3SEL
+Group1:3 = P4IN, P4OUT, P4DIR, P4SEL
+Group1:4 = P5IN, P5OUT, P5DIR, P5SEL
+Group1:5 = P6IN, P6OUT, P6DIR, P6SEL
+
+Group2   = System Clock, DCOCTL, BCSCTL1, BCSCTL2
+
+Group3   = Comparator A, CACTL1, CACTL2, CAPD
+
+;;Group4   = UARTs, UCTL.0, UTCTL.0, URCTL.0, UMCTL.0, UBR0.0, UBR1.0, URXBUF.0 UTXBUF.0
+;;Group4:1 = UCTL.1, UTCTL.1, URCTL.1, UMCTL.1, UBR0.1, UBR1.1, URXBUF.1 UTXBUF.1
+Group4   = UARTs, U0CTL, U0TCTL, U0RCTL, U0MCTL, U0BR0, U0BR1, U0RXBUF, U0TXBUF
+Group4:1 = U1CTL, U1TCTL, U1RCTL, U1MCTL, U1BR0, U1BR1, U1RXBUF, U1TXBUF
+
+Group5   = ADC12, ADC12MCTL0, ADC12MCTL1, ADC12MCTL2, ADC12MCTL3
+Group5:1 = ADC12MCTL4, ADC12MCTL5, ADC12MCTL6, ADC12MCTL7
+Group5:2 = ADC12MCTL8, ADC12MCTL9, ADC12MCTL10, ADC12MCTL11
+Group5:3 = ADC12MCTL12, ADC12MCTL13, ADC12MCTL14, ADC12MCTL15
+Group5:4 = ADC12CTL0, ADC12CTL1, ADC12IFG, ADC12IE, ADC12IV
+Group5:5 = ADC12MEM0, ADC12MEM1, ADC12MEM2, ADC12MEM3
+Group5:6 = ADC12MEM4, ADC12MEM5, ADC12MEM6, ADC12MEM7
+Group5:7 = ADC12MEM8, ADC12MEM9, ADC12MEM10, ADC12MEM11
+Group5:8 = ADC12MEM12, ADC12MEM13, ADC12MEM14, ADC12MEM15
+
+Group6   = Flash, FCTL1, FCTL2, FCTL3
+
+;;Group7   = Multiplier, MPY, MPYS, MAC, MACS, OP_2, RESLO, RESHI, SUMEXT
+Group7   = Multiplier, MPY, MPYS, MAC, MACS, OP2, RESLO, RESHI, SUMEXT
+
+;;Group8   = Timer A, TAIV, TACTL, TACCTL0, TACCTL1, TACCTL2, TAR, TACCR0, TACCR1, TACCR2
+Group8   = Timer A, TAIV, TACTL, CCTL0, CCTL1, CCTL2, TAR, CCR0, CCR1, CCR2
+
+Group9   = Timer B, TBIV, TBCTL, TBR
+Group9:1 = TBCCTL0, TBCCTL1, TBCCTL2, TBCCTL3, TBCCTL4, TBCCTL5, TBCCTL6
+Group9:2 = TBCCR0, TBCCR1, TBCCR2, TBCCR3, TBCCR4, TBCCR5, TBCCR6
+
+Group10  = Watchdog Timer, WDTCTL
+
+;; End of file
+
